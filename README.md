@@ -53,7 +53,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - To use the SSE transport, requires a Redis attached to the project under `process.env.REDIS_URL`
 - Make sure you have [Fluid compute](https://vercel.com/docs/functions/fluid-compute) enabled for efficient execution
 - After enabling Fluid compute, open `server/routes/mcp/[transport].ts` and adjust `maxDuration` to 800 if you using a Vercel Pro or Enterprise account
-- [Deploy the Nuxt MCP template](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fatinux%2Fmcp-with-nuxt-vercel&env=REDIS_URL)
+- [Deploy the Nuxt MCP template](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fatinux%2Fmcp-with-nuxt-vercel&integration-ids=oac_V3R1GIpkoJorr6fqyiwdhl17)
 
 
 ## Sample Client
