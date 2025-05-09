@@ -4,7 +4,7 @@ import { SSEClientTransport } from '@modelcontextprotocol/sdk/client/sse.js'
 const origin = process.argv[2] || 'https://mcp-for-nuxt.vercel.app'
 
 async function main() {
-  const transport = new SSEClientTransport(new URL(`${origin}/sse`))
+  const transport = new SSEClientTransport(new URL(`${origin}/mcp/sse`))
 
   const client = new Client(
     {

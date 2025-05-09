@@ -6,7 +6,9 @@ This is a simple Nuxt application that serves as a MCP server on Vercel using `@
 
 This sample app uses the [Vercel MCP Adapter](https://www.npmjs.com/package/@vercel/mcp-adapter) that allows you to drop in an MCP server on a group of routes in any Nuxt project.
 
-Update `server/[transport].ts` with your tools, prompts, and resources following the [MCP TypeScript SDK documentation](https://github.com/modelcontextprotocol/typescript-sdk/tree/main?tab=readme-ov-file#server).
+Update `server/routes/mcp/[transport].ts` with your tools, prompts, and resources following the [MCP TypeScript SDK documentation](https://github.com/modelcontextprotocol/typescript-sdk/tree/main?tab=readme-ov-file#server).
+
+The MCP server is mounted on `/mcp/[transport]` (ex: `/mcp/sse`).
 
 ## Setup
 
@@ -50,7 +52,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 - To use the SSE transport, requires a Redis attached to the project under `process.env.REDIS_URL`
 - Make sure you have [Fluid compute](https://vercel.com/docs/functions/fluid-compute) enabled for efficient execution
-- After enabling Fluid compute, open `server/routes/[transport].ts` and adjust `maxDuration` to 800 if you using a Vercel Pro or Enterprise account
+- After enabling Fluid compute, open `server/routes/mcp/[transport].ts` and adjust `maxDuration` to 800 if you using a Vercel Pro or Enterprise account
 - [Deploy the Nuxt MCP template](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fatinux%2Fmcp-with-nuxt-vercel&env=REDIS_URL)
 
 
